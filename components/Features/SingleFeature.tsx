@@ -2,9 +2,8 @@ import React from "react";
 import { Feature } from "@/types/feature";
 import { motion } from "framer-motion";
 
-
 const SingleFeature = ({ feature }: { feature: Feature }) => {
-  const { icon: IconComponent, title, description } = feature;
+  const { icon: IconComponent, title, description, size } = feature;
 
   return (
     <motion.div

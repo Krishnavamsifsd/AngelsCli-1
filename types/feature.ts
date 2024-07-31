@@ -5,4 +5,5 @@ export type Feature = {
   icon: IconType;
   title: string;
   description: string;
+  size?: number; // Add this line to include the optional size property
 };
