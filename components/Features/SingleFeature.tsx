@@ -22,7 +22,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         whileHover={{ rotate: 15, scale: 1.1 }}
         transition={{ type: "spring", stiffness: 300 }}
       >
-        <IconComponent size={32} />
+        <IconComponent style={{ fontSize: '32px' }} />
       </motion.div>
       <div className="mt-6">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
