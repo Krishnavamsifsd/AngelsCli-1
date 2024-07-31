@@ -21,9 +21,9 @@ const menuData: Menu[] = [
   },
   {
     id: 2.3,
-    title: "Docs",
+    title: "Investors",
     newTab: false,
-    path: "/docs",
+    path: "/investors",
   },
   {
     id: 3,
@@ -37,34 +37,10 @@ const menuData: Menu[] = [
         path: "/blog",
       },
       {
-        id: 34,
-        title: "Sign In",
-        newTab: false,
-        path: "/auth/signin",
-      },
-      {
-        id: 35,
-        title: "Sign Up",
-        newTab: false,
-        path: "/auth/signup",
-      },
-      {
-        id: 35,
-        title: "Docs",
-        newTab: false,
-        path: "/docs",
-      },
-      {
         id: 35.1,
         title: "Support",
         newTab: false,
         path: "/support",
-      },
-      {
-        id: 36,
-        title: "404",
-        newTab: false,
-        path: "/error",
       },
     ],
   },

@@ -16,7 +16,6 @@ const Footer = () => {
                     opacity: 0,
                     y: -20,
                   },
-
                   visible: {
                     opacity: 1,
                     y: 0,
@@ -33,30 +32,31 @@ const Footer = () => {
                     width={110}
                     height={80}
                     src="/images/logo/logo-light.svg"
-                    alt="Logo"
+                    alt="Andhra Angles Logo"
                     className="dark:hidden"
                   />
                   <Image
                     width={110}
                     height={80}
                     src="/images/logo/logo-dark.svg"
-                    alt="Logo"
+                    alt="Andhra Angles Logo"
                     className="hidden dark:block"
                   />
                 </a>
 
-                <p className="mb-10 mt-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <p className="mb-10 mt-5 text-gray-700 dark:text-gray-300">
+                  Bridging the gap between innovative startups and visionary
+                  investors in Andhra Pradesh.
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
-                  contact
+                  Contact
                 </p>
                 <a
-                  href="#"
+                  href="mailto:ceo@andhrangels.in"
                   className="text-itemtitle font-medium text-black dark:text-white"
                 >
-                  hello@solid.com
+                  ceo@andhrangels.in
                 </a>
               </motion.div>
 
@@ -67,7 +67,6 @@ const Footer = () => {
                       opacity: 0,
                       y: -20,
                     },
-
                     visible: {
                       opacity: 1,
                       y: 0,
@@ -86,7 +85,7 @@ const Footer = () => {
                   <ul>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Home
@@ -94,26 +93,26 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Product
+                        About Us
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Careers
+                        Startups
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Pricing
+                        Investors
                       </a>
                     </li>
                   </ul>
@@ -125,7 +124,6 @@ const Footer = () => {
                       opacity: 0,
                       y: -20,
                     },
-
                     visible: {
                       opacity: 1,
                       y: 0,
@@ -144,31 +142,31 @@ const Footer = () => {
                   <ul>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Company
+                        Resources
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Press media
+                        Events
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Our Blog
+                        Blog
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Contact Us

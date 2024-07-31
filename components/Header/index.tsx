@@ -151,23 +151,23 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            <ThemeToggler />
+          <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-6 xl:mt-0">
+  <ThemeToggler />
 
-            <Link
-              href="https://github.com/NextJSTemplates/solid-nextjs"
-              className="text-regular font-medium text-waterloo hover:text-primary"
-            >
-              GitHub Repo 🌟
-            </Link>
+  <Link
+    href="https://github.com/NextJSTemplates/solid-nextjs"
+    className="flex items-center justify-center gap-2 px-6 py-3 text-regular font-medium text-white bg-gradient-to-r from-blue-900 to-black rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:from-blue-900 hover:to-blue-900 dark:bg-gradient-to-r dark:from-blue-800 dark:to-black dark:hover:from-blue-800 dark:hover:to-blue-800"
+  >
+    Submit your pitch 🌟
+  </Link>
 
-            <Link
-              href="https://nextjstemplates.com/templates/solid"
-              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
-            >
-              Get Pro 🔥
-            </Link>
-          </div>
+  <Link
+    href="https://nextjstemplates.com/templates/solid"
+    className="flex items-center justify-center gap-2 px-7.5 py-3 text-regular text-white bg-gradient-to-r from-blue-900 to-black rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:from-blue-900 hover:to-blue-900 dark:bg-gradient-to-r dark:from-blue-800 dark:to-black dark:hover:from-blue-800 dark:hover:to-blue-800"
+  >
+    Invest with us 🔥
+  </Link>
+</div>
         </div>
       </div>
     </header>
