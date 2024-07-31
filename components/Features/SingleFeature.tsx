@@ -1,7 +1,7 @@
 import React from "react";
 import { Feature } from "@/types/feature";
 import { motion } from "framer-motion";
-import { FaIconName } from "react-icons/fa"; // Replace FaIconName with the specific icon you need
+
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon: IconComponent, title, description } = feature;
