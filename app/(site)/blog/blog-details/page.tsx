@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Blog Details Page - Solid SaaS Boilerplate",
-  description: "This is Blog details page for Solid Pro",
+  title: "Blog Details Page - Andhra Angels",
+  description: "This is the blog details page for Andhra Angels, a platform for angel investors and startup entrepreneurs.",
   // other metadata
 };
 
@@ -54,19 +54,19 @@ const SingleBlogPage = async () => {
 
                 <ul>
                   <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                    <a href="#">Blog</a>
+                    <a href="#">Angel Investing</a>
                   </li>
                   <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                    <a href="#">Events</a>
+                    <a href="#">Startup Tips</a>
                   </li>
                   <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                    <a href="#">Grids</a>
+                    <a href="#">Success Stories</a>
                   </li>
                   <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                    <a href="#">News</a>
+                    <a href="#">Market Trends</a>
                   </li>
                   <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                    <a href="#">Rounded</a>
+                    <a href="#">Funding Rounds</a>
                   </li>
                 </ul>
               </div>
@@ -80,7 +80,7 @@ const SingleBlogPage = async () => {
                   <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                     <Image
                       src={"/images/blog/blog-01.png"}
-                      alt="Kobe Steel plant that supplied"
+                      alt="Startup Pitch Event"
                       fill
                       className="rounded-md object-cover object-center"
                     />
@@ -88,46 +88,34 @@ const SingleBlogPage = async () => {
                 </div>
 
                 <h2 className="mb-5 mt-11 text-3xl font-semibold text-black dark:text-white 2xl:text-sectiontitle2">
-                  Kobe Steel plant that supplied
+                  How to Pitch Your Startup to Angel Investors
                 </h2>
 
                 <ul className="mb-9 flex flex-wrap gap-5 2xl:gap-7.5">
                   <li>
                     <span className="text-black dark:text-white">Author: </span>{" "}
-                    Jhon Doe
+                    Jane Smith
                   </li>
                   <li>
                     <span className="text-black dark:text-white">
-                      Published On: July 30, 2023
+                      Published On: October 10, 2023
                     </span>{" "}
                   </li>
                   <li>
                     <span className="text-black dark:text-white">
                       Category:
                     </span>
-                    Events
+                    Angel Investing
                   </li>
                 </ul>
 
                 <div className="blog-details">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nunc quis nibh lorem. Duis sed odio lorem. In a efficitur
-                    leo. Ut venenatis rhoncus quam sed condimentum. Curabitur
-                    vel turpis in dolor volutpat imperdiet in ut mi. Integer non
-                    volutpat nulla. Nunc elementum elit viverra, tempus quam
-                    non, interdum ipsum.
+                    Pitching your startup to angel investors can be a daunting task. However, with the right preparation and approach, you can make a lasting impression. Here are some tips to help you succeed.
                   </p>
 
                   <p>
-                    Aenean augue ex, condimentum vel metus vitae, aliquam porta
-                    elit. Quisque non metus ac orci mollis posuere. Mauris vel
-                    ipsum a diam interdum ultricies sed vitae neque. Nulla
-                    porttitor quam vitae pulvinar placerat. Nulla fringilla elit
-                    sit amet justo feugiat sodales. Morbi eleifend, enim non
-                    eleifend laoreet, odio libero lobortis lectus, non porttitor
-                    sem urna sit amet metus. In sollicitudin quam est,
-                    pellentesque consectetur felis fermentum vitae.
+                    First, ensure that your pitch deck is concise and visually appealing. Highlight the problem your startup solves, your unique solution, market opportunity, business model, and team. Practice your pitch multiple times to build confidence.
                   </p>
 
                   <div className="flex flex-wrap gap-5">
@@ -135,27 +123,22 @@ const SingleBlogPage = async () => {
                       src={"/images/blog/blog-01.png"}
                       width={350}
                       height={200}
-                      alt="image"
+                      alt="Pitch Deck"
                     />
                     <Image
                       src={"/images/blog/blog-02.png"}
                       width={350}
                       height={200}
-                      alt="image"
+                      alt="Investor Meeting"
                     />
                   </div>
 
                   <h3 className="pt-8">
-                    Nunc elementum elit viverra, tempus quam non
+                    Understanding Your Audience
                   </h3>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nunc quis nibh lorem. Duis sed odio lorem. In a efficitur
-                    leo. Ut venenatis rhoncus quam sed condimentum. Curabitur
-                    vel turpis in dolor volutpat imperdiet in ut mi. Integer non
-                    volutpat nulla. Nunc elementum elit viverra, tempus quam
-                    non, interdum ipsum.
+                    Know your audience and tailor your pitch to their interests. Research the investors you will be pitching to and understand their investment preferences. This will help you address their concerns and highlight aspects of your startup that align with their goals.
                   </p>
                 </div>
 

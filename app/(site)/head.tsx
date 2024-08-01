@@ -1,6 +1,7 @@
 export default function Head() {
   return (
     <>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"></link>
       <title>Andhra Angels - Angel Investors and Startup Entrepreneurs</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content="Connecting angel investors with startup entrepreneurs to foster innovation and growth." />

@@ -171,14 +171,14 @@ const Contact = () => {
               <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                 Our Location
               </h3>
-              <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
+              <p>Guntur , Andhra Pradesh</p>
             </div>
             <div className="mb-7">
               <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                 Email Address
               </h3>
               <p>
-                <a href="mailto:yourmail@domainname.com">yourmail@domainname.com</a>
+                <a href="mailto:yourmail@domainname.com">ceo@andhraangels.in</a>
               </p>
             </div>
             <div>
@@ -186,7 +186,7 @@ const Contact = () => {
                 Phone Number
               </h4>
               <p>
-                <a href="tel:+009423346343843">+009 42334 6343 843</a>
+                <a href="tel:+917671979496">+91 7671979496</a>
               </p>
             </div>
           </motion.div>

@@ -13,6 +13,7 @@ module.exports = {
   theme: {
     fontFamily: {
       inter: ["Inter", "sans-serif"],
+      lobster: ["Lobster", "cursive"], // Add this line
     },
     extend: {
       colors: {

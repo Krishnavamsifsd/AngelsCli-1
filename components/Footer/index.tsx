@@ -27,7 +27,7 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/2 lg:w-1/4"
               >
-                <a href="index.html" className="relative">
+                {/* <a href="index.html" className="relative">
                   <Image
                     width={110}
                     height={80}
@@ -42,8 +42,23 @@ const Footer = () => {
                     alt="Andhra Angles Logo"
                     className="hidden dark:block"
                   />
+                </a> */}
+                <a
+                  href="/"
+                  className="flex items-center justify-center rounded-md bg-gray-100 px-4 py-2 shadow-lg dark:bg-gray-900"
+                >
+                  <span className="font-lobster mr-1 text-5xl font-extrabold tracking-[0.15em] text-gray-800 dark:text-white">
+                    A
+                  </span>
+                  <div className="flex flex-col leading-none">
+                    <span className="font-lobster m-0 text-lg font-bold tracking-[0.15em] text-gray-800 dark:text-white">
+                      ndhra
+                    </span>
+                    <span className="text-md font-roboto m-0 -mt-1 font-bold tracking-[0.15em] text-gray-800 dark:text-white">
+                      ngels
+                    </span>
+                  </div>
                 </a>
-
                 <p className="mb-10 mt-5 text-gray-700 dark:text-gray-300">
                   Bridging the gap between innovative startups and visionary
                   investors in Andhra Pradesh.

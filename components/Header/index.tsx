@@ -37,7 +37,7 @@ const Header = () => {
     >
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
-          <a href="/">
+          {/* <a href="/">
             <Image
               src="/images/logo/logo-dark.svg"
               alt="logo"
@@ -46,13 +46,29 @@ const Header = () => {
               className="hidden w-full dark:block"
             />
             <Image
-              src="/images/logo/logo-light.svg"
+              src="/images/logo/new-logo.jpeg"
               alt="logo"
               width={119.03}
               height={30}
               className="w-full dark:hidden"
             />
-          </a>
+          </a> */}
+<a
+  href="/"
+  className="flex items-center justify-center rounded-md py-2 px-4 bg-gray-100 dark:bg-gray-900 shadow-lg"
+>
+  <span className="text-5xl font-extrabold text-gray-800 dark:text-white mr-1 font-lobster tracking-[0.15em]">
+    A
+  </span>
+  <div className="flex flex-col leading-none">
+    <span className="text-lg font-bold text-gray-800 dark:text-white font-lobster tracking-[0.15em] m-0">
+      ndhra
+    </span>
+    <span className="text-md font-bold text-gray-800 dark:text-white font-roboto tracking-[0.15em] m-0 -mt-1">
+      ngels
+    </span>
+  </div>
+</a>
 
           {/* <!-- Hamburger Toggle BTN --> */}
           <button
@@ -99,7 +115,7 @@ const Header = () => {
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            "navbar !visible mt-4 h-auto max-h-[450px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
           <nav>
@@ -151,29 +167,27 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-6 xl:mt-0">
-  <ThemeToggler />
+          <div className="mt-7 flex flex-col items-center justify-center gap-6 sm:flex-row xl:mt-0">
+            <ThemeToggler />
 
-  <Link
-    href="https://github.com/NextJSTemplates/solid-nextjs"
-    className="flex items-center justify-center gap-2 px-6 py-3 text-regular font-medium text-white bg-gradient-to-r from-blue-900 to-black rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:from-blue-900 hover:to-blue-900 dark:bg-gradient-to-r dark:from-blue-800 dark:to-black dark:hover:from-blue-800 dark:hover:to-blue-800"
-  >
-    Submit your pitch 🌟
-  </Link>
+            <Link
+              href="/submit-your-pitch"
+              className="flex transform items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-900 to-black px-6 py-3 text-regular font-medium text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:from-blue-900 hover:to-blue-900 dark:bg-gradient-to-r dark:from-blue-800 dark:to-black dark:hover:from-blue-800 dark:hover:to-blue-800"
+            >
+              Submit your pitch 🌟
+            </Link>
 
-  <Link
-    href="https://nextjstemplates.com/templates/solid"
-    className="flex items-center justify-center gap-2 px-7.5 py-3 text-regular text-white bg-gradient-to-r from-blue-900 to-black rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:from-blue-900 hover:to-blue-900 dark:bg-gradient-to-r dark:from-blue-800 dark:to-black dark:hover:from-blue-800 dark:hover:to-blue-800"
-  >
-    Invest with us 🔥
-  </Link>
-</div>
+            <Link
+              href="https://nextjstemplates.com/templates/solid"
+              className="flex transform items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-900 to-black px-7.5 py-3 text-regular text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:from-blue-900 hover:to-blue-900 dark:bg-gradient-to-r dark:from-blue-800 dark:to-black dark:hover:from-blue-800 dark:hover:to-blue-800"
+            >
+              Invest with us 🔥
+            </Link>
+          </div>
         </div>
       </div>
     </header>
   );
 };
-
-// w-full delay-300
 
 export default Header;

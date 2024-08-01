@@ -27,20 +27,32 @@ const menuData: Menu[] = [
   },
   {
     id: 3,
-    title: "Pages",
+    title: "About",
     newTab: false,
     submenu: [
       {
         id: 31,
-        title: "Blog Grid",
+        title: "Award",
         newTab: false,
-        path: "/blog",
+        path: "/awards",
+      },
+      {
+        id: 33,
+        title: "Events",
+        newTab: false,
+        path: "/events",
+      },
+      {
+        id: 35,
+        title: "News",
+        newTab: false,
+        path: "/news",
       },
       {
         id: 35.1,
-        title: "Support",
+        title: "Public policy",
         newTab: false,
-        path: "/support",
+        path: "/public-policy",
       },
     ],
   },

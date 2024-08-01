@@ -6,28 +6,28 @@ const SidebarLink = () => {
     <>
       <li className="block">
         <Link
-          href={`/docs`}
+          href={`/investors`}
           className={`flex w-full rounded-sm bg-stroke px-3 py-2 text-base text-black dark:bg-blackho dark:text-white`}
         >
-          Introduction
+          Overview
         </Link>
         <Link
-          href={`/docs`}
+          href={`/investors/guides`}
           className={`flex w-full rounded-sm px-3 py-2 text-base text-black dark:text-white `}
         >
-          Bootstrap Template Guide
+          Investment Guides
         </Link>
         <Link
-          href={`/docs`}
+          href={`/investors/opportunities`}
           className={`flex w-full rounded-sm px-3 py-2 text-base text-black dark:text-white `}
         >
-          Style Guide
+          Investment Opportunities
         </Link>
         <Link
-          href={`/docs`}
+          href={`/investors/stories`}
           className={`flex w-full rounded-sm px-3 py-2 text-base text-black dark:text-white `}
         >
-          Using Tailwind Components
+          Success Stories
         </Link>
       </li>
     </>
