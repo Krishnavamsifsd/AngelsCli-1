@@ -178,7 +178,7 @@ const Header = () => {
             </Link>
 
             <Link
-              href="https://nextjstemplates.com/templates/solid"
+              href="/invest-with-us"
               className="flex transform items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-900 to-black px-7.5 py-3 text-regular text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:from-blue-900 hover:to-blue-900 dark:bg-gradient-to-r dark:from-blue-800 dark:to-black dark:hover:from-blue-800 dark:hover:to-blue-800"
             >
               Invest with us 🔥

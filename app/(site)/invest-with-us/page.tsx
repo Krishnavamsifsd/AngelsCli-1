@@ -1,16 +1,16 @@
 "use client"
 import React, { useState } from 'react';
 
-const SubmitFormPage = () => {
+const InvestWithUsPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     companyName: '',
     companyWebsite: '',
-    fundingAmount: '',
-    businessModel: '',
-    pitch: '',
+    investmentAmount: '',
+    investmentInterest: '',
+    message: '',
     termsAccepted: false
   });
 
@@ -33,7 +33,7 @@ const SubmitFormPage = () => {
       <div className="max-w-lg w-full space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-gray-100">
-            Submit Your Pitch
+            Invest with Us
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
             Join Andhra Angels and collaborate with investors and entrepreneurs
@@ -106,42 +106,41 @@ const SubmitFormPage = () => {
               />
             </div>
             <div>
-              <label htmlFor="fundingAmount" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Funding Amount</label>
+              <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Investment Amount</label>
               <input
-                id="fundingAmount"
-                name="fundingAmount"
+                id="investmentAmount"
+                name="investmentAmount"
                 type="number"
-                value={formData.fundingAmount}
+                value={formData.investmentAmount}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                placeholder="Funding Amount Requested"
+                placeholder="Investment Amount"
               />
             </div>
             <div>
-              <label htmlFor="businessModel" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Business Model</label>
+              <label htmlFor="investmentInterest" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Investment Interest</label>
               <input
-                id="businessModel"
-                name="businessModel"
+                id="investmentInterest"
+                name="investmentInterest"
                 type="text"
-                value={formData.businessModel}
+                value={formData.investmentInterest}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                placeholder="Business Model"
+                placeholder="Investment Interest"
               />
             </div>
             <div>
-              <label htmlFor="pitch" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Pitch</label>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
               <textarea
-                id="pitch"
-                name="pitch"
-                // rows="4"
-                value={formData.pitch}
+                id="message"
+                name="message"
+                value={formData.message}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                placeholder="Your Pitch"
+                placeholder="Your Message"
               ></textarea>
             </div>
             <div className="flex items-start">
@@ -177,4 +176,4 @@ const SubmitFormPage = () => {
   );
 }
 
-export default SubmitFormPage;
+export default InvestWithUsPage;
