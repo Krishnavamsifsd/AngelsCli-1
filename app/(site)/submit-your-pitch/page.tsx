@@ -29,8 +29,8 @@ const SubmitFormPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-lg w-full space-y-8">
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-12">
+      <div className="max-w-lg w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-gray-100">
             Submit Your Pitch
@@ -39,7 +39,7 @@ const SubmitFormPage = () => {
             Join Andhra Angels and collaborate with investors and entrepreneurs
           </p>
         </div>
-        <form onSubmit={handleSubmit} className="mt-8 space-y-6 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+        <form onSubmit={handleSubmit} className="mt-8 space-y-6">
           <div className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
@@ -136,7 +136,6 @@ const SubmitFormPage = () => {
               <textarea
                 id="pitch"
                 name="pitch"
-                // rows="4"
                 value={formData.pitch}
                 onChange={handleChange}
                 required
