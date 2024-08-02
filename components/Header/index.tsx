@@ -37,23 +37,17 @@ const Header = () => {
     >
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
-          {/* <a href="/">
-            <Image
-              src="/images/logo/logo-dark.svg"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="hidden w-full dark:block"
-            />
-            <Image
-              src="/images/logo/new-logo.jpeg"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="w-full dark:hidden"
-            />
-          </a> */}
-<a
+          <a href="/">
+
+          <Image
+  src="/images/logo/new-logo-bg.png"
+  alt="logo"
+  width={119.03}
+  height={15}
+  className="w-full h-15"
+/>
+          </a>
+{/* <a
   href="/"
   className="flex items-center justify-center rounded-md py-2 px-4 bg-gray-100 dark:bg-gray-900 shadow-lg"
 >
@@ -68,7 +62,7 @@ const Header = () => {
       ngels
     </span>
   </div>
-</a>
+</a> */}
 
           {/* <!-- Hamburger Toggle BTN --> */}
           <button
