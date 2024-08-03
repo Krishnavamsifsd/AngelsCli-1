@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import SidebarLink from "@/components/Docs/SidebarLink";
 import { FaFacebook, FaInstagram, FaLinkedin, FaUserCircle } from "react-icons/fa";
-import Lines from "@/components/Lines";
 
 const investors = [
   {
@@ -50,10 +49,11 @@ const investors = [
   },
   // Add more investors here
 ];
-export default function InvestorsPage() {
+
+function InvestorsPage() {
   return (
     <>
-  <motion.section
+      <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -68,9 +68,9 @@ export default function InvestorsPage() {
             zIndex: -1,
           }}
         ></div>
-        <div className="container mx-auto">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 lg:w-1/4">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap">
+            <div className="w-full lg:w-1/4 mb-8 lg:mb-0">
               <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -82,27 +82,23 @@ export default function InvestorsPage() {
                 </ul>
               </motion.div>
             </div>
-
-            <div className="w-full px-4 lg:w-3/4">
+            <div className="w-full lg:w-3/4">
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 className="m-3 rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800"
               >
-                <h1 className="mb-6 text-4xl font-bold text-gray-900 dark:text-white">
+                <h1 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
                   Welcome to Andhra Angels Investors Section
                 </h1>
-
-                <p className="mb-4 text-lg text-gray-700 dark:text-gray-300">
-                  This section is dedicated to providing resources and
-                  information for angel investors and startup entrepreneurs.
+                <p className="mb-4 text-base text-gray-700 dark:text-gray-300">
+                  This section is dedicated to providing resources and information for angel investors and startup entrepreneurs.
                 </p>
-                <p className="mb-4 text-lg text-gray-700 dark:text-gray-300">
-                  Here, you can find detailed guides, investment opportunities,
-                  and success stories from our community.
+                <p className="mb-4 text-base text-gray-700 dark:text-gray-300">
+                  Here, you can find detailed guides, investment opportunities, and success stories from our community.
                 </p>
-                <p className="mb-4 text-lg text-gray-700 dark:text-gray-300">
+                <p className="mb-4 text-base text-gray-700 dark:text-gray-300">
                   Please visit:{" "}
                   <b>
                     <a
@@ -112,15 +108,13 @@ export default function InvestorsPage() {
                       andhraangels.com/investors
                     </a>
                   </b>{" "}
-                  to explore more about our investment opportunities and
-                  community events.
+                  to explore more about our investment opportunities and community events.
                 </p>
               </motion.div>
             </div>
           </div>
         </div>
       </motion.section>
-
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -131,8 +125,8 @@ export default function InvestorsPage() {
             "url(https://img.freepik.com/free-vector/graph-chart-with-moving-up-arrow-stock-market-financial-investment-diagram-blue-background_56104-1814.jpg?w=826&t=st=1722535568~exp=1722536168~hmac=91d70c92ea94554c24b5f13d7f0a2b2812896ed9cd8e18b22e9185a0e4ec49f2)",
         }}
       >
-        <div className="container mx-auto">
-          <h2 className="mb-8 text-center text-3xl font-bold text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-8 text-center text-2xl font-bold text-white">
             Andhra Angel Investors
           </h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -152,10 +146,10 @@ export default function InvestorsPage() {
               >
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <FaUserCircle className="h-16 w-16 text-gray-500 dark:text-gray-300" />
+                    <FaUserCircle className="h-12 w-12 text-gray-500 dark:text-gray-300" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-xl font-semibold text-white">
+                    <h3 className="text-lg font-semibold text-white">
                       {investor.name}
                     </h3>
                     <p className="text-gray-300">{investor.title}</p>
@@ -176,9 +170,8 @@ export default function InvestorsPage() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <p className="text-lg text-gray-300">
-              If you want to be part of Andhra Angel's exclusive network, then
-              please fill the form.
+            <p className="text-base text-gray-300">
+              If you want to be part of Andhra Angel's exclusive network, then please fill the form.
             </p>
             <a
               href="https://andhraangels.com/join"
@@ -192,3 +185,5 @@ export default function InvestorsPage() {
     </>
   );
 }
+
+export default InvestorsPage;

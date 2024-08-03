@@ -40,13 +40,14 @@ const Header = () => {
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a
             href="/"
-            className="inline-block rounded bg-transparent px-2 dark:bg-gray-100"
+            className="inline-block rounded bg-transparent px-4 dark:bg-gray-100"
           >
             <Image
               src="/images/logo/new-logo-bg.png"
               alt="logo"
-              width={100} // Fixed width
-              height={15} // Fixed height
+              className="h-10 w-auto sm:h-12" // Tailwind CSS classes for height 40px (h-10) on mobile and increased height (h-12) on desktop
+              width={100} // These props are still required for Next.js Image component
+              height={40}
             />
           </a>
 

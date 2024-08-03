@@ -25,6 +25,12 @@ const menuData: Menu[] = [
     newTab: false,
     submenu: [
       {
+        id: 30,
+        title: "Founder",
+        newTab: false,
+        path: "/founder",
+      },
+      {
         id: 31,
         title: "Award",
         newTab: false,
