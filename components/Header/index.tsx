@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { FaDollarSign, FaRocket } from "react-icons/fa";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -29,40 +30,25 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full py-7 ${
+      className={`fixed left-0 top-0 z-99999 w-full py-4 ${
         stickyMenu
-          ? "bg-white !py-4 shadow transition duration-100 dark:bg-black"
+          ? "bg-white !py-3 shadow transition duration-100 dark:bg-black"
           : ""
       }`}
     >
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
-          <a href="/">
-
-          <Image
-  src="/images/logo/new-logo-bg.png"
-  alt="logo"
-  width={119.03}
-  height={15}
-  className="w-full h-15"
-/>
+          <a
+            href="/"
+            className="inline-block rounded bg-transparent px-2 dark:bg-gray-100"
+          >
+            <Image
+              src="/images/logo/new-logo-bg.png"
+              alt="logo"
+              width={100} // Fixed width
+              height={15} // Fixed height
+            />
           </a>
-{/* <a
-  href="/"
-  className="flex items-center justify-center rounded-md py-2 px-4 bg-gray-100 dark:bg-gray-900 shadow-lg"
->
-  <span className="text-5xl font-extrabold text-gray-800 dark:text-white mr-1 font-lobster tracking-[0.15em]">
-    A
-  </span>
-  <div className="flex flex-col leading-none">
-    <span className="text-lg font-bold text-gray-800 dark:text-white font-lobster tracking-[0.15em] m-0">
-      ndhra
-    </span>
-    <span className="text-md font-bold text-gray-800 dark:text-white font-roboto tracking-[0.15em] m-0 -mt-1">
-      ngels
-    </span>
-  </div>
-</a> */}
 
           {/* <!-- Hamburger Toggle BTN --> */}
           <button
@@ -139,7 +125,12 @@ const Header = () => {
                       >
                         {menuItem.submenu.map((item, key) => (
                           <li key={key} className="hover:text-primary">
-                            <Link href={item.path || "#"}>{item.title}</Link>
+                            <Link
+                              href={item.path || "#"}
+                              onClick={() => setNavigationOpen(false)}
+                            >
+                              {item.title}
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -152,6 +143,7 @@ const Header = () => {
                           ? "text-primary hover:text-primary"
                           : "hover:text-primary"
                       }
+                      onClick={() => setNavigationOpen(false)}
                     >
                       {menuItem.title}
                     </Link>
@@ -163,17 +155,18 @@ const Header = () => {
 
           <div className="mt-7 flex flex-col items-center justify-center gap-6 sm:flex-row xl:mt-0">
             <ThemeToggler />
-
             <Link
               href="/submit-your-pitch"
-              className="flex transform items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-900 to-black px-6 py-3 text-regular font-medium text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:from-blue-900 hover:to-blue-900 dark:bg-gradient-to-r dark:from-blue-800 dark:to-black dark:hover:from-blue-800 dark:hover:to-blue-800"
+              className="flex transform items-center justify-center gap-2 rounded-full border border-transparent bg-gradient-to-r from-blue-700 to-purple-700 px-4 py-2 text-base font-medium text-white shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-white hover:from-blue-600 hover:to-purple-600 dark:bg-gradient-to-r dark:from-blue-600 dark:to-purple-600 dark:hover:from-blue-500 dark:hover:to-purple-500"
+              onClick={() => setNavigationOpen(false)}
             >
               Submit your pitch 🌟
             </Link>
 
             <Link
               href="/invest-with-us"
-              className="flex transform items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-900 to-black px-7.5 py-3 text-regular text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:from-blue-900 hover:to-blue-900 dark:bg-gradient-to-r dark:from-blue-800 dark:to-black dark:hover:from-blue-800 dark:hover:to-blue-800"
+              className="flex transform items-center justify-center gap-2 rounded-full border border-transparent bg-gradient-to-r from-blue-700 to-purple-700 px-4 py-2 text-base font-medium text-white shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-white hover:from-blue-600 hover:to-purple-600 dark:bg-gradient-to-r dark:from-blue-600 dark:to-purple-600 dark:hover:from-blue-500 dark:hover:to-purple-500"
+              onClick={() => setNavigationOpen(false)}
             >
               Invest with us 🔥
             </Link>
