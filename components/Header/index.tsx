@@ -15,6 +15,20 @@ const Header = () => {
 
   const pathUrl = usePathname();
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Check on initial load
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   // Sticky menu
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -153,25 +167,26 @@ const Header = () => {
               ))}
             </ul>
           </nav>
+          {(!isMobile || navigationOpen) && (
+            <div className="mt-7 flex flex-col items-center justify-center gap-6 sm:flex-row xl:mt-0">
+              <ThemeToggler />
+              <Link
+                href="/submit-your-pitch"
+                className="flex transform items-center justify-center gap-2 rounded-full border border-transparent bg-gradient-to-r from-blue-700 to-purple-700 px-4 py-2 text-base font-medium text-white shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-white hover:from-blue-600 hover:to-purple-600 dark:bg-gradient-to-r dark:from-blue-600 dark:to-purple-600 dark:hover:from-blue-500 dark:hover:to-purple-500"
+                onClick={() => setNavigationOpen(false)}
+              >
+                Submit your pitch 🌟
+              </Link>
 
-          <div className="mt-7 flex flex-col items-center justify-center gap-6 sm:flex-row xl:mt-0">
-            <ThemeToggler />
-            <Link
-              href="/submit-your-pitch"
-              className="flex transform items-center justify-center gap-2 rounded-full border border-transparent bg-gradient-to-r from-blue-700 to-purple-700 px-4 py-2 text-base font-medium text-white shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-white hover:from-blue-600 hover:to-purple-600 dark:bg-gradient-to-r dark:from-blue-600 dark:to-purple-600 dark:hover:from-blue-500 dark:hover:to-purple-500"
-              onClick={() => setNavigationOpen(false)}
-            >
-              Submit your pitch 🌟
-            </Link>
-
-            <Link
-              href="/invest-with-us"
-              className="flex transform items-center justify-center gap-2 rounded-full border border-transparent bg-gradient-to-r from-blue-700 to-purple-700 px-4 py-2 text-base font-medium text-white shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-white hover:from-blue-600 hover:to-purple-600 dark:bg-gradient-to-r dark:from-blue-600 dark:to-purple-600 dark:hover:from-blue-500 dark:hover:to-purple-500"
-              onClick={() => setNavigationOpen(false)}
-            >
-              Invest with us 🔥
-            </Link>
-          </div>
+              <Link
+                href="/invest-with-us"
+                className="flex transform items-center justify-center gap-2 rounded-full border border-transparent bg-gradient-to-r from-blue-700 to-purple-700 px-4 py-2 text-base font-medium text-white shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-white hover:from-blue-600 hover:to-purple-600 dark:bg-gradient-to-r dark:from-blue-600 dark:to-purple-600 dark:hover:from-blue-500 dark:hover:to-purple-500"
+                onClick={() => setNavigationOpen(false)}
+              >
+                Invest with us 🔥
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </header>
