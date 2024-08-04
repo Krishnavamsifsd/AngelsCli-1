@@ -39,7 +39,7 @@ const Hero = () => {
               <h4 className="animate-fade-in mb-4.5 text-xl font-medium text-black dark:text-white">
                 🔥 Andhra Angel Networks - Empowering the Future
               </h4>
-              <h1 className="animate-slide-in mb-5 pr-16 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-yellow-400 to-purple-600 xl:text-5xl">
+              <h1 className="animate-slide-in mb-5 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-yellow-400 to-purple-600 xl:text-5xl">
                 <strong>Let's</strong> <br />
                 <strong>Build</strong> <br />
                 <strong>Futures</strong> <br />
