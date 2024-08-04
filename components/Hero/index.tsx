@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
-  const [email, setEmail] = useState("");
   const [currentText, setCurrentText] = useState("Investors");
   const [slide, setSlide] = useState(false);
 
@@ -23,8 +22,12 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleApplyNow = () => {
+    // Handle Apply Now button click
+  };
+
+  const handleLearnMore = () => {
+    // Handle Learn More button click
   };
 
   return (
@@ -48,70 +51,63 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="animate-fade-in text-lg text-black dark:text-gray-400">
-  Andhra Angel Networks connects innovative startups with visionary angel investors. We support entrepreneurs from schools by conducting internships and forming tie-ups with educational institutions.
-</p>
-
-<div className="mt-10">
-  <form onSubmit={handleSubmit}>
-    <div className="flex flex-wrap gap-5">
-      <input
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        type="email"
-        placeholder="Enter your email address"
-        className="transform rounded-full border border-gray-300 px-5 py-3 text-base shadow-md transition duration-300 ease-in-out hover:scale-105 focus:border-blue-500 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:shadow-none dark:focus:border-blue-500"
-        aria-label="Email address"
-      />
-      <button
-        aria-label="Get started button"
-        className="flex items-center justify-center transform rounded-full bg-gradient-to-r from-blue-500 to-purple-600 px-7 py-3 text-base text-white transition duration-300 ease-in-out hover:scale-105 hover:from-purple-600 hover:to-blue-500 dark:bg-gradient-to-r dark:from-blue-700 dark:to-purple-800 dark:hover:from-purple-800 dark:hover:to-blue-700"
-      >
-        <span className="mr-2">🚀</span> Get Started
-      </button>
-    </div>
-  </form>
+                Andhra Angel Networks connects innovative startups with visionary angel investors. We support entrepreneurs from schools by conducting internships and forming tie-ups with educational institutions.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-5">
+  <button
+    onClick={handleApplyNow}
+    className="relative flex transform items-center justify-center gap-2 rounded-md border border-transparent bg-gradient-to-r from-blue-900 via-blue-800 to-purple-700 px-6 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-blue-700 hover:from-blue-800 hover:via-blue-700 hover:to-purple-600 hover:shadow-lg dark:bg-gradient-to-r dark:from-blue-800 dark:via-blue-700 dark:to-purple-600 dark:hover:from-blue-700 dark:hover:via-blue-600 dark:hover:to-purple-500 w-full sm:w-auto flex-1"
+  >
+    Apply Now
+  </button>
+  <button
+    onClick={handleLearnMore}
+    className="relative flex transform items-center justify-center gap-2 rounded-md border border-transparent bg-gradient-to-r from-gray-600 via-gray-700 to-gray-900 px-6 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-gray-500 hover:from-gray-500 hover:via-gray-600 hover:to-gray-800 hover:shadow-md dark:bg-gradient-to-r dark:from-gray-500 dark:via-gray-600 dark:to-gray-800 dark:hover:from-gray-400 dark:hover:via-gray-500 dark:hover:to-gray-700 dark:border-gray-500 dark:shadow-md w-full sm:w-auto flex-1"
+  >
+    Learn More
+  </button>
 </div>
             </div>
 
-           <div className="animate_right hidden lg:block">
-  <div className="relative 2xl:-mr-7.5">
-    <Image
-      src="/images/shape/shape-01.png"
-      alt="shape"
-      width={46}
-      height={246}
-      className="absolute -left-11.5 top-0 animate-float"
-    />
-    <Image
-      src="/images/shape/shape-02.svg"
-      alt="shape"
-      width={36.9}
-      height={36.7}
-      className="animate-spin-slow absolute bottom-0 right-0 z-10 animate-float"
-    />
-    <Image
-      src="/images/shape/shape-03.svg"
-      alt="shape"
-      width={21.64}
-      height={21.66}
-      className="absolute -right-6.5 bottom-0 z-1 animate-pulse animate-float"
-    />
-    <div className="relative aspect-[700/444] w-full">
-      <Image
-        className="shadow-solid-l dark:hidden rounded-lg"
-        src="/images/hero/hero-light.avif"
-        alt="Hero"
-        fill
-      />
-      <Image
-        className="hidden shadow-solid-l dark:block rounded-lg dark:filter dark:brightness-75"
-        src="/images/hero/hero-light.avif"
-        alt="Hero"
-        fill
-      />
-    </div>
-  </div>
-</div>
+            <div className="animate_right hidden lg:block">
+              <div className="relative 2xl:-mr-7.5">
+                <Image
+                  src="/images/shape/shape-01.png"
+                  alt="shape"
+                  width={46}
+                  height={246}
+                  className="absolute -left-11.5 top-0 animate-float"
+                />
+                <Image
+                  src="/images/shape/shape-02.svg"
+                  alt="shape"
+                  width={36.9}
+                  height={36.7}
+                  className="animate-spin-slow absolute bottom-0 right-0 z-10 animate-float"
+                />
+                <Image
+                  src="/images/shape/shape-03.svg"
+                  alt="shape"
+                  width={21.64}
+                  height={21.66}
+                  className="absolute -right-6.5 bottom-0 z-1 animate-pulse animate-float"
+                />
+                <div className="relative aspect-[700/444] w-full">
+                  <Image
+                    className="shadow-solid-l dark:hidden rounded-lg"
+                    src="/images/hero/hero-light.avif"
+                    alt="Hero"
+                    fill
+                  />
+                  <Image
+                    className="hidden shadow-solid-l dark:block rounded-lg dark:filter dark:brightness-75"
+                    src="/images/hero/hero-light.avif"
+                    alt="Hero"
+                    fill
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

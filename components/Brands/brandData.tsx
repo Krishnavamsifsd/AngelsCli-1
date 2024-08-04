@@ -1,48 +1,27 @@
-import { Brand } from "@/types/brand";
+import { FaUsers, FaRocket, FaDollarSign, FaHandHoldingUsd } from "react-icons/fa";
 
-const brandData: Brand[] = [
+const servicesData = [
   {
-    id: 0.25,
-    name: "Client",
-    href: "#",
-    image: "/images/brand/brand-light-01.svg",
-    imageLight: "/images/brand/brand-dark-01.svg",
+    id: 0.3,
+    title: "Community",
+    description: "Work On Entrepreneurial Mindset, Problem Statement/Opportunity Gap, Solutions, POC",
+    Icon: FaUsers,
+    animationDelay: 500,
   },
   {
     id: 0.3,
-    name: "Client",
-    href: "#",
-    image: "/images/brand/brand-light-02.svg",
-    imageLight: "/images/brand/brand-dark-02.svg",
+    title: "Accelerator",
+    description: "Work On Design Thinking Execution Approach, Viable Business Model, Expandable Model",
+    Icon: FaRocket,
+    animationDelay: 700,
   },
   {
-    id: 0.4,
-    name: "Client",
-    href: "#",
-    image: "/images/brand/brand-light-03.svg",
-    imageLight: "/images/brand/brand-dark-03.svg",
-  },
-  {
-    id: 0.5,
-    name: "Client",
-    href: "#",
-    image: "/images/brand/brand-light-04.svg",
-    imageLight: "/images/brand/brand-dark-04.svg",
-  },
-  {
-    id: 0.6,
-    name: "Client",
-    href: "#",
-    image: "/images/brand/brand-light-05.svg",
-    imageLight: "/images/brand/brand-dark-05.svg",
-  },
-  {
-    id: 0.7,
-    name: "Client",
-    href: "#",
-    image: "/images/brand/brand-light-06.svg",
-    imageLight: "/images/brand/brand-dark-06.svg",
+    id: 0.3,
+    title: "Funds Raising",
+    description: "Work On Execution Viability Pitch Deck, Investors Ready, Potential Investors, Investors Meetups.",
+    Icon: FaHandHoldingUsd,
+    animationDelay: 1000,
   },
 ];
 
-export default brandData;
+export default servicesData;

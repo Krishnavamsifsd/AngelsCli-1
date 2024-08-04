@@ -1,47 +1,19 @@
-import React, { useRef, useEffect } from "react";
-import Image from "next/image";
-import { Brand } from "@/types/brand";
-import { motion } from "framer-motion";
+import React from "react";
 
-const SingleBrand = ({ brand }: { brand: Brand }) => {
-  const { image, href, name, imageLight, id } = brand;
+const ServiceItem = ({ title, description, Icon, animationDelay }) => (
+  <div
+    className="relative flex items-start p-6 border rounded-lg shadow-md bg-white dark:bg-gray-800 overflow-hidden border-gray-300 dark:border-none"
+    style={{ animationDelay: `${animationDelay}s` }}
+  >
+    {/* Decorative Shape */}
+    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 rounded-lg pointer-events-none"></div>
+    
+    <Icon size={40} className="relative z-10 mr-4 text-primary" />
+    <div className="relative z-10">
+      <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">{title}</h3>
+      <p className="text-sm text-gray-700 dark:text-gray-300">{description}</p>
+    </div>
+  </div>
+);
 
-  return (
-    <>
-      <motion.a
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: -20,
-          },
-
-          visible: {
-            opacity: 1,
-            y: 0,
-          },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 1, delay: id }}
-        viewport={{ once: true }}
-        href={href}
-        className="animate_top mx-w-full relative block h-10 w-[98px]"
-      >
-        <Image
-          className="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
-          src={image}
-          alt={name}
-          fill
-        />
-        <Image
-          className="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
-          src={imageLight}
-          alt={name}
-          fill
-        />
-      </motion.a>
-    </>
-  );
-};
-
-export default SingleBrand;
+export default ServiceItem;
