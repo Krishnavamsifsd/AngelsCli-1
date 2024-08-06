@@ -1,17 +1,57 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Contact = () => {
-  const [hasMounted, setHasMounted] = React.useState(false);
-  React.useEffect(() => {
+  const [hasMounted, setHasMounted] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    subject: "",
+    phoneNumber: "",
+    message: "",
+    agreeToTerms: false,
+  });
+
+  useEffect(() => {
     setHasMounted(true);
   }, []);
   if (!hasMounted) {
     return null;
   }
 
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Construct a readable message from formData
+    const message = `
+      Full Name: ${formData.fullName}
+      Email: ${formData.email}
+      Subject: ${formData.subject}
+      Phone Number: ${formData.phoneNumber}
+      Message: ${formData.message}
+    `;
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message.trim());
+
+    // Construct the WhatsApp URL
+    const whatsappURL = `https://wa.me/?text=${encodedMessage}`;
+
+    // Open the WhatsApp URL in a new window/tab
+    window.open(whatsappURL, "_blank");
+  };
   return (
     <section id="support" className="px-4 md:px-8 2xl:px-0">
       <div className="relative mx-auto max-w-c-1390 px-4 pt-10 md:px-8 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
@@ -53,17 +93,23 @@ const Contact = () => {
               Send a message
             </h2>
 
-            <form action="https://formbold.com/s/unique_form_id" method="POST">
+            <form onSubmit={handleSubmit} method="POST">
               <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                 <input
                   type="text"
+                  name="fullName"
                   placeholder="Full name"
+                  value={formData.fullName}
+                  onChange={handleChange}
                   className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-primary focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-primary dark:focus:placeholder:text-white lg:w-1/2"
                 />
 
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email address"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-primary focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-primary dark:focus:placeholder:text-white lg:w-1/2"
                 />
               </div>
@@ -71,21 +117,30 @@ const Contact = () => {
               <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                 <input
                   type="text"
+                  name="subject"
                   placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
                   className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-primary focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-primary dark:focus:placeholder:text-white lg:w-1/2"
                 />
 
                 <input
                   type="text"
+                  name="phoneNumber"
                   placeholder="Phone number"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
                   className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-primary focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-primary dark:focus:placeholder:text-white lg:w-1/2"
                 />
               </div>
 
               <div className="mb-11.5 flex">
                 <textarea
+                  name="message"
                   placeholder="Message"
                   rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full border-b border-stroke bg-transparent focus:border-primary focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-primary dark:focus:placeholder:text-white"
                 ></textarea>
               </div>
@@ -95,9 +150,12 @@ const Contact = () => {
                   <input
                     id="default-checkbox"
                     type="checkbox"
+                    name="agreeToTerms"
+                    checked={formData.agreeToTerms}
+                    onChange={handleChange}
                     className="peer sr-only"
                   />
-                  <span className="border-gray-300 bg-gray-100 text-blue-600 dark:border-gray-600 dark:bg-gray-700 group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded peer-checked:bg-primary">
+                  <span className="group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded border-gray-300 bg-gray-100 text-blue-600 peer-checked:bg-primary dark:border-gray-600 dark:bg-gray-700">
                     <svg
                       className="opacity-0 peer-checked:group-[]:opacity-100"
                       width="10"
@@ -125,7 +183,8 @@ const Contact = () => {
 
                 <button
                   aria-label="send message"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-primary px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-primary-dark"
+                  type="submit"
+                  className="hover:bg-primary-dark inline-flex items-center gap-2.5 rounded-full bg-primary px-6 py-3 font-medium text-white duration-300 ease-in-out"
                 >
                   Send Message
                   <svg
@@ -186,7 +245,7 @@ const Contact = () => {
                 Phone Number
               </h4>
               <p>
-                <a href="tel:+917671979496">+91 7671979496</a>
+                <a href="tel:+91 9063764978">+91 9063764978</a>
               </p>
             </div>
           </motion.div>

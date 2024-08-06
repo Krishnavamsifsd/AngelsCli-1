@@ -31,6 +31,12 @@ const menuData: Menu[] = [
         path: "/founder",
       },
       {
+        id: 35,
+        title: "Team",
+        newTab: false,
+        path: "/team",
+      },
+      {
         id: 31,
         title: "Award",
         newTab: false,
@@ -42,18 +48,7 @@ const menuData: Menu[] = [
         newTab: false,
         path: "/events",
       },
-      {
-        id: 35,
-        title: "News",
-        newTab: false,
-        path: "/news",
-      },
-      {
-        id: 35.1,
-        title: "Public policy",
-        newTab: false,
-        path: "/public-policy",
-      },
+      
     ],
   },
   {

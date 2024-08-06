@@ -23,8 +23,8 @@ const Hero = () => {
   }, []);
 
   const handleApplyNow = () => {
-    // Handle Apply Now button click
-  };
+    window.location.href = '/apply-now';
+    };
 
   const handleLearnMore = () => {
     // Handle Learn More button click

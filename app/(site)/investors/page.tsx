@@ -129,41 +129,41 @@ function InvestorsPage() {
         {/* Investors Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {investors.map((investor, index) => (
-          <motion.div
-          key={index}
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col items-center rounded-lg p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl bg-gradient-to-r from-gray-100 to-gray-200 dark:from-[#4a00e0] dark:to-[#8e2de2] text-black dark:text-white"
-        >
-          <div className="relative mb-4 h-24 w-24 rounded-full bg-white p-1">
-            <img
-              src={`https://via.placeholder.com/150?text=${investor.name.charAt(0)}`}
-              alt={investor.name}
-              className="h-full w-full rounded-full object-cover"
-            />
+        <motion.div
+        key={index}
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col items-center rounded-lg p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl bg-gradient-to-r from-gray-100 to-gray-200 dark:from-[#4a00e0] dark:to-[#8e2de2] text-black dark:text-white m-[15px] md:m-0 border border-gray-200 dark:border-[#3b007d]"
+      >
+        <div className="relative mb-4 h-24 w-24 rounded-full bg-white p-1">
+          <img
+            src={`https://via.placeholder.com/150?text=${investor.name.charAt(0)}`}
+            alt={investor.name}
+            className="h-full w-full rounded-full object-cover"
+          />
+        </div>
+        <h3 className="text-lg font-semibold text-center mb-1">{investor.name}</h3>
+        <p className="text-sm text-center mb-4">{investor.title}</p>
+        <div className="bg-gray-200 dark:bg-[#3b007d] w-full p-4 rounded-lg mb-1">
+          <p className="text-sm mb-1">Expertise: {investor.expertise}</p>
+          <p className="text-sm mb-1">Budget: {investor.budget}</p>
+          <p className="text-sm mb-1">Experience: {investor.experience}</p>
+        </div>
+        <div className="bg-gray-200 dark:bg-[#3b007d] w-full p-4 rounded-lg">
+          <div className="flex justify-center space-x-4">
+            <a href={investor.linkedin} className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300" aria-label="LinkedIn">
+              <FaLinkedin />
+            </a>
+            <a href={investor.facebook} className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300" aria-label="Facebook">
+              <FaFacebook />
+            </a>
+            <a href={investor.instagram} className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300" aria-label="Instagram">
+              <FaInstagram />
+            </a>
           </div>
-          <h3 className="text-lg font-semibold text-center mb-1">{investor.name}</h3>
-          <p className="text-sm text-center mb-4">{investor.title}</p>
-          <div className="bg-gray-200 dark:bg-[#3b007d] w-full p-4 rounded-lg mb-1">
-            <p className="text-sm mb-1">Expertise: {investor.expertise}</p>
-            <p className="text-sm mb-1">Budget: {investor.budget}</p>
-            <p className="text-sm mb-1">Experience: {investor.experience}</p>
-          </div>
-          <div className="bg-gray-200 dark:bg-[#3b007d] w-full p-4 rounded-lg">
-            <div className="flex justify-center space-x-4">
-              <a href={investor.linkedin} className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300" aria-label="LinkedIn">
-                <FaLinkedin />
-              </a>
-              <a href={investor.facebook} className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300" aria-label="Facebook">
-                <FaFacebook />
-              </a>
-              <a href={investor.instagram} className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300" aria-label="Instagram">
-                <FaInstagram />
-              </a>
-            </div>
-          </div>
-        </motion.div>
+        </div>
+      </motion.div>
           ))}
         </div>
 

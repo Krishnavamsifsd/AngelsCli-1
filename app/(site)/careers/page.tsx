@@ -21,17 +21,16 @@ const Careers: NextPage = () => {
       <section id="openings" className="mb-12">
         <h2 className="text-xl font-semibold mb-4">Current Openings</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
           <div className="bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 text-gray-800 dark:text-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
-            <h3 className="text-lg font-semibold">Software Engineer</h3>
-            <p className="text-base">Develop and maintain web applications. Required skills: React, Node.js, SQL.</p>
+          <h3 className="text-lg font-semibold tracking-wide">Business Development Intern</h3>            <p className="text-base">Assist in business development activities. Required skills: Communication, Market Research, Sales.</p>
             <a href="#" className="text-blue-500 dark:text-blue-300 underline">Learn More</a>
           </div>
           <div className="bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 text-gray-800 dark:text-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
-            <h3 className="text-lg font-semibold">Marketing Specialist</h3>
-            <p className="text-base">Plan and execute marketing campaigns. Required skills: SEO, Content Marketing, Social Media.</p>
+            <h3 className="text-lg font-semibold tracking-wide">Digital Media Intern</h3>
+            <p className="text-base">Create and manage digital content. Required skills: Social Media Management, Content Creation, Analytics.</p>
             <a href="#" className="text-blue-500 dark:text-blue-300 underline">Learn More</a>
           </div>
-          {/* Add more job listings as needed */}
         </div>
       </section>
 
