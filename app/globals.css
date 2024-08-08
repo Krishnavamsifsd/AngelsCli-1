@@ -14,6 +14,21 @@
 .testimonial-01 .swiper-pagination {
   @apply relative pt-[50px];
 }
+.text-yellow-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500;
+}
+
+.bg-yellow-gradient {
+  @apply bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500;
+}
+
+.bg-yellow-gradient-dark {
+  @apply bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600;
+}
+
+.glow-border {
+  box-shadow: 0 0 5px rgba(255, 255, 0, 0.3), 0 0 10px rgba(255, 255, 0, 0.2), 0 0 15px rgba(255, 255, 0, 0.1);
+}
 
 #supportCheckbox:checked ~ div span {
   @apply opacity-100;

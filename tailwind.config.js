@@ -147,6 +147,18 @@ module.exports = {
         line3: "line 9s linear infinite",
         float: 'float 3s ease-in-out infinite',
       },
+      backgroundImage: {
+        'days-background': "linear-gradient(to right, #ff7e5f, #feb47b)",
+        'hours-background': "linear-gradient(to right, #6a11cb, #2575fc)",
+        'minutes-background': "linear-gradient(to right, #43cea2, #185a9d)",
+        'seconds-background': "linear-gradient(to right, #ff512f, #dd2476)",
+      },
+      borderColor: {
+        'days-border': '#ff7e5f',
+        'hours-border': '#6a11cb',
+        'minutes-border': '#43cea2',
+        'seconds-border': '#ff512f',
+      },
     },
   },
   plugins: [],

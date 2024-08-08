@@ -10,6 +10,7 @@ import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 import ToasterContext from "../context/ToastContext";
+import GrandLaunchPopup from "@/components/grandlaunch/GrandLaunch";
 
 export default function RootLayout({
   children,
@@ -27,6 +28,7 @@ export default function RootLayout({
           <Lines />
           <Header />
           <ToasterContext />
+          <GrandLaunchPopup />
           {children}
           <Footer />
           <ScrollToTop />
