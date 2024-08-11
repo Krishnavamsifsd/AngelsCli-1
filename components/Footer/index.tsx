@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { FaBlogger, FaBloggerB } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -302,7 +303,8 @@ const Footer = () => {
               viewport={{ once: true }}
               className="animate_top"
             >
-             <ul className="flex items-center gap-5">
+
+<ul className="flex items-center gap-5">
   <li>
     <a href="https://www.youtube.com/@AndhraAngelNetworks" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
       <svg
@@ -337,7 +339,7 @@ const Footer = () => {
           />
         </g>
         <defs>
-          <clipPath id="clip0_48_1502">
+          <clipPath id="clip0_48_1502)">
             <rect width="24" height="24" fill="white" />
           </clipPath>
         </defs>
@@ -361,13 +363,21 @@ const Footer = () => {
           />
         </g>
         <defs>
-          <clipPath id="clip0_48_1505">
+          <clipPath id="clip0_48_1505)">
             <rect width="24" height="24" fill="white" />
           </clipPath>
         </defs>
       </svg>
     </a>
   </li>
+  <li>
+    <a href="https://andhraangelnetworks.blogspot.com/" aria-label="Blogger" target="_blank" rel="noopener noreferrer">
+      <FaBloggerB
+        className="fill-[#A5A9B0] transition-all duration-300 hover:fill-primary"
+        size={22}
+      />
+    </a>
+</li>
 </ul>
             </motion.div>
           </div>

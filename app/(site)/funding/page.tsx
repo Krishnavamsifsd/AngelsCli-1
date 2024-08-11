@@ -86,7 +86,6 @@ const FundingEligibilityComponent: React.FC = () => {
             </motion.div>
           </div>
 
-          <a href="#" className="text-blue-500 hover:underline text-sm">Submit now</a>
         </div>
       </div>
 

@@ -127,7 +127,7 @@ function InvestorsPage() {
         </div>
 
         {/* Investors Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {investors.map((investor, index) => (
         <motion.div
         key={index}
@@ -165,7 +165,7 @@ function InvestorsPage() {
         </div>
       </motion.div>
           ))}
-        </div>
+        </div> */}
 
         {/* Success Stories Section */}
         <div className="mt-16">

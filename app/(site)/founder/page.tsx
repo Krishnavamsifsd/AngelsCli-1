@@ -27,7 +27,7 @@ const Founder = () => {
           Abdul's career highlights include leadership roles at JP Morgan and Accenture, where he spearheaded impactful initiatives during the COVID-19 pandemic, such as healthcare assistance and employment generation. He holds a Master's in Computers and certifications in CSR and training.
         </p>
         <p className="text-md text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-          Currently, as Incubation Manager at Vignan Group, Abdul manages 200+ startup portfolios and leads Andhra Angel Networks, fostering investments in sectors like Agriculture and Renewable Energy.
+        Abdul manages 200+ startup portfolios and leads Andhra Angel Networks, fostering investments in sectors like Agriculture and Renewable Energy.
         </p>
       </div>
     </div>
