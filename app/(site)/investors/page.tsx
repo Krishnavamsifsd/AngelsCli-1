@@ -192,8 +192,8 @@ function InvestorsPage() {
 </div>
 
 {/* Mentors Grid */}
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-  {mentors.map((mentor, index) => (
+{/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+  {mentors?.map((mentor, index) => (
     <motion.div
       key={index}
       initial={{ scale: 0.9, opacity: 0 }}
@@ -229,7 +229,7 @@ function InvestorsPage() {
       </div>
     </motion.div>
   ))}
-</div>
+</div> */}
         {/* Success Stories Section */}
         {/* <div className="mt-16">
   <h3 className="mb-8 text-center text-2xl font-bold text-gray-900 dark:text-white">
@@ -311,7 +311,7 @@ function InvestorsPage() {
             If you want to be part of Andhra Angel's exclusive network, then please fill the form.
           </p>
           <a
-            href="https://andhraangels.com/join"
+            href="/apply-now"
             className="mt-4 inline-block rounded-lg bg-blue-500 px-6 py-3 text-white shadow-lg transition-colors duration-300 hover:bg-blue-600"
           >
             Join Now
