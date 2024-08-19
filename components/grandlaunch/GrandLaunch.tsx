@@ -6,13 +6,19 @@ const COUNTDOWN_TARGET = new Date("2024-08-21T00:00:00");
 
 const getTimeLeft = () => {
   const totalTimeLeft = COUNTDOWN_TARGET.getTime() - new Date().getTime();
+
+  if (totalTimeLeft <= 0) {
+    return { message: "The event is now live! Countdown ended." };
+  }
+
+
   const days = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
   const hours = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
   const seconds = Math.floor((totalTimeLeft / 1000) % 60);
+
   return { days, hours, minutes, seconds };
 };
-
 const GrandLaunchPopup = () => {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
   const [isVisible, setIsVisible] = useState(true);

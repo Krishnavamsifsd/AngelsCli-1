@@ -106,6 +106,18 @@ const investors = [
   },
 ];
 
+const mentors = [
+  // {
+  //   name: "John Doe",
+  //   title: "Senior Software Engineer",
+  //   expertise: "Full Stack Development",
+  //   experience: "10 years",
+  //   linkedin: "https://www.linkedin.com/in/johndoe",
+  //   facebook: "https://www.facebook.com/johndoe",
+  //   instagram: "https://www.instagram.com/johndoe"
+  // }
+];
+
 function InvestorsPage() {
   return (
     <motion.section
@@ -166,9 +178,60 @@ function InvestorsPage() {
       </motion.div>
           ))}
         </div> */}
+<br />
+<br />
+<br />
+{/* Introduction Section */}
+<h2 className="mb-8 text-center text-3xl font-bold text-gray-900 dark:text-white">
+          Andhra Angel Network Mentors
+        </h2>
+<div className="mb-12 text-center">
+  <p className="text-lg text-gray-700 dark:text-gray-300">
+    Welcome to the Andhra Angel Network Mentorship Program. Our mentors are experienced professionals dedicated to guiding and supporting innovative startups. Join us to gain valuable insights and accelerate your entrepreneurial journey.
+  </p>
+</div>
 
+{/* Mentors Grid */}
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+  {mentors.map((mentor, index) => (
+    <motion.div
+      key={index}
+      initial={{ scale: 0.9, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col items-center rounded-lg p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl bg-gradient-to-r from-gray-100 to-gray-200 dark:from-[#4a00e0] dark:to-[#8e2de2] text-black dark:text-white m-[15px] md:m-0 border border-gray-200 dark:border-[#3b007d]"
+    >
+      <div className="relative mb-4 h-24 w-24 rounded-full bg-white p-1">
+        <img
+          src={`https://via.placeholder.com/150?text=${mentor.name.charAt(0)}`}
+          alt={mentor.name}
+          className="h-full w-full rounded-full object-cover"
+        />
+      </div>
+      <h3 className="text-lg font-semibold text-center mb-1">{mentor.name}</h3>
+      <p className="text-sm text-center mb-4">{mentor.title}</p>
+      <div className="bg-gray-200 dark:bg-[#3b007d] w-full p-4 rounded-lg mb-1">
+        <p className="text-sm mb-1">Expertise: {mentor.expertise}</p>
+        <p className="text-sm mb-1">Experience: {mentor.experience}</p>
+      </div>
+      <div className="bg-gray-200 dark:bg-[#3b007d] w-full p-4 rounded-lg">
+        <div className="flex justify-center space-x-4">
+          <a href={mentor.linkedin} className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300" aria-label="LinkedIn">
+            <FaLinkedin />
+          </a>
+          <a href={mentor.facebook} className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300" aria-label="Facebook">
+            <FaFacebook />
+          </a>
+          <a href={mentor.instagram} className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300" aria-label="Instagram">
+            <FaInstagram />
+          </a>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
         {/* Success Stories Section */}
-        <div className="mt-16">
+        {/* <div className="mt-16">
   <h3 className="mb-8 text-center text-2xl font-bold text-gray-900 dark:text-white">
     Success Stories
   </h3>
@@ -198,7 +261,7 @@ function InvestorsPage() {
       <p className="relative mt-4 text-right text-gray-900 dark:text-white">- Founder, Startup C</p>
     </div>
   </div>
-</div>
+</div> */}
 
         {/* How It Works Section */}
         <div className="mt-16">

@@ -26,6 +26,7 @@ import {
 } from "react-icons/fa"; // Added icons for new sections
 import { useTheme } from "next-themes";
 import EntrepreneurMindsetCurriculum from "@/components/emp/Emp";
+import Image from "next/image";
 // import EntrepreneurMindsetCurriculum from "components/emp/EntrepreneurMindsetCurriculum.tsx";
 
 const services = [
@@ -106,28 +107,42 @@ const Services = () => {
           Explore our range of services designed to help you succeed.
         </p>
       </div>
-      <div className="mb-16 grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            className={`relative rounded-lg border p-3 text-center shadow-md ${resolvedTheme === "dark" ? "border-gray-700 bg-gray-800 text-white" : "border-gray-200 bg-white text-gray-800"} transform transition-transform hover:scale-105 hover:bg-indigo-100 hover:shadow-2xl dark:hover:bg-indigo-900`}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 * index }}
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <div className="mx-auto mb-2 flex h-8 w-8 transform items-center justify-center rounded-full bg-indigo-500 text-white transition-transform hover:rotate-12 sm:h-10 sm:w-10">
-              <service.icon className="text-lg sm:text-xl" />
-            </div>
-            <p className="text-xs font-medium sm:text-sm">{service.text}</p>
-            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 transition-opacity hover:opacity-20"></div>
-          </motion.div>
-        ))}
-      </div>
+
+      <div className="mb-16 grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="lg:col-span-1 relative">
+  <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-50 rounded-lg shadow-2xl"></div>
+  <Image
+    src="/images/emp/coworking.jpeg"
+    alt="Coworking space"
+    className="relative z-10 mx-auto mb-8 rounded-lg object-cover shadow-lg"
+    width={800}  // Increased width
+    height={400}
+  />
+</div>
+  <div className="lg:col-span-2 grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-2">
+    {services.map((service, index) => (
+      <motion.div
+        key={index}
+        className={`relative rounded-lg border p-3 text-center shadow-md ${resolvedTheme === "dark" ? "border-gray-700 bg-gray-800 text-white" : "border-gray-200 bg-white text-gray-800"} transform transition-transform hover:scale-105 hover:bg-indigo-100 hover:shadow-2xl dark:hover:bg-indigo-900`}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 * index }}
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 },
+        }}
+      >
+        <div className="mx-auto mb-2 flex h-8 w-8 transform items-center justify-center rounded-full bg-indigo-500 text-white transition-transform hover:rotate-12 sm:h-10 sm:w-10">
+          <service.icon className="text-lg sm:text-xl" />
+        </div>
+        <p className="text-xs font-medium sm:text-sm">{service.text}</p>
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 transition-opacity hover:opacity-20"></div>
+      </motion.div>
+    ))}
+  </div>
+</div>
+
       <div className="section-header mb-8 text-center">
         <h3 className="mb-2 text-xl font-bold text-indigo-600 sm:text-2xl">
           Skill Training
