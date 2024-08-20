@@ -35,7 +35,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+  
     // Construct a readable message from formData
     const message = `
       Full Name: ${formData.fullName}
@@ -44,13 +44,13 @@ const Contact = () => {
       Phone Number: ${formData.phoneNumber}
       Message: ${formData.message}
     `;
-
+  
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(message.trim());
-
-    // Construct the WhatsApp URL
-    const whatsappURL = `https://wa.me/?text=${encodedMessage}`;
-
+  
+    // Construct the WhatsApp URL with the specific phone number
+    const whatsappURL = `https://wa.me/919063764978?text=${encodedMessage}`;
+  
     // Open the WhatsApp URL in a new window/tab
     window.open(whatsappURL, "_blank");
   };

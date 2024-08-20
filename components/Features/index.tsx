@@ -12,11 +12,14 @@ const Feature = () => {
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
           <SectionHeader
-            headerInfo={{
-              title: "KEY FEATURES",
-              subtitle: "Why Choose Andhra Angels",
-              description: `Discover the unique advantages of joining Andhra Angels. Our platform offers unparalleled opportunities for both startups and investors.`,
-            }}
+         headerInfo={{
+          title: "KEY FEATURES",
+          subtitle: "Why Choose Andhra Angels",
+          description: `Discover the unique advantages of joining Andhra Angels. Our platform offers unparalleled opportunities for both startups and investors. 
+          We are deeply embedded in the Indian start-up and investment ecosystem. We partner with different government agencies, angel networks, and other institutions for building a sustainable ecosystem for new-age entrepreneurs. We collaborate with organizations and individuals who are passionate about helping start-ups grow. 
+          Receives 300+ business plans per month. 
+          Partner to industry leaders.`,
+        }}
           />
           {/* <!-- Section Title End --> */}
 

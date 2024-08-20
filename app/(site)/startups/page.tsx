@@ -5,7 +5,7 @@ const startups = [
   {
     name: "DessinRx Healthcare Pvt Ltd",
     description: "Advanced cryogenic technologies for industrial applications.",
-    image: "https://via.placeholder.com/150",
+    image: "https://i.ibb.co/dWKXDLd/Whats-App-Image-2024-08-13-at-2-03-04-PM-1.jpg",
     funding: "$500K",
     website: "https://www.dessinrx.com/",
     status: "Mentoring",
@@ -29,14 +29,14 @@ const startups = [
   {
     name: "Jesvid Cryo Technologies Private Limited",
     description: "Advanced cryogenic technologies for industrial applications.",
-    image: "https://via.placeholder.com/150",
+    image: "https://i.ibb.co/vwKWYhH/Whats-App-Image-2024-08-13-at-2-03-03-PM.jpg",
     funding: "$500K",
     status: "Mentoring",
   },
   {
     name: "Tech Atriocare Private Limited",
     description: "Innovative healthcare solutions for a better tomorrow.",
-    image: "https://via.placeholder.com/150",
+    image: "https://i.ibb.co/cwZngK3/Whats-App-Image-2024-08-13-at-2-03-14-PM.jpg",
     funding: "$1M",
     website:
       "https://techatriocare.com/?__cf_chl_rt_tk=oCUbH_sqp003La1nDG83QjSgHuatHR1AARd4bvHFy2E-1723268501-0.0.1.1-3754",
@@ -66,7 +66,7 @@ const startups = [
   {
     name: "Nutri Revive Pvt Ltd",
     description: "Revolutionizing nutrition with advanced technology.",
-    image: "https://via.placeholder.com/150",
+    image: "https://i.ibb.co/c127F21/Whats-App-Image-2024-08-13-at-2-03-04-PM.jpg",
     funding: "$1.2M",
     status: "Mentoring",
   },
@@ -155,6 +155,7 @@ const Portfolio = () => {
     </div>
   );
 };
+
 const Page = () => {
   return (
     <div className="mx-8 mt-20">
