@@ -2,8 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const COUNTDOWN_TARGET = new Date("2024-08-21T12:00:00");
-
+const COUNTDOWN_TARGET = new Date("2024-09-08T14:00:00");
 const getTimeLeft = () => {
   const totalTimeLeft = COUNTDOWN_TARGET.getTime() - new Date().getTime();
 
@@ -49,7 +48,9 @@ const GrandLaunchPopup = () => {
           <div className="relative z-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-yellow-gradient mb-4">Grand Launch Event</h2>
             <p className="text-yellow-gradient mb-4">
-              Celebrate with us on <strong>21st August</strong> for the Grand Launch on <strong>World Entrepreneur Day</strong>!
+              Celebrate with us on <strong>8th September</strong> for the 
+              <br /> Grand Launch
+               {/* on <strong>World Entrepreneur Day</strong>! */}
             </p>
             <p className="text-yellow-gradient mb-4">Venue: <strong>ITC Guntur</strong></p>
             <div className="mb-4">
