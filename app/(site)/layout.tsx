@@ -28,7 +28,7 @@ export default function RootLayout({
           <Lines />
           <Header />
           <ToasterContext />
-          <GrandLaunchPopup />
+          {/* <GrandLaunchPopup /> */}
           {children}
           <Footer />
           <ScrollToTop />

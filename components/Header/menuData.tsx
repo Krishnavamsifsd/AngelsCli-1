@@ -24,12 +24,12 @@ const menuData: Menu[] = [
         newTab: false,
         path: "/founder",
       },
-      {
-        id: 35,
-        title: "Team",
-        newTab: false,
-        path: "/team",
-      },
+      // {
+      //   id: 35,
+      //   title: "Team",
+      //   newTab: false,
+      //   path: "/team",
+      // },
       {
         id: 31,
         title: "Award",
